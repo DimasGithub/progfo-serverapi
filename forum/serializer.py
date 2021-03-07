@@ -5,7 +5,7 @@ from forum.models import Forum, Groupforum, Tags
 class SerializerForum(serializers.ModelSerializer):
     class Meta:
         model = Forum
-        field = '__all__'
+        fields = '__all__'
 
 
 class SerializerGroupForum(serializers.ModelSerializer):
