@@ -28,7 +28,7 @@ def CreateData(request):
     return Response(serializer.data)
 
 
-@api_view(['PUT'])
+@api_view(['GET', 'PUT'])
 def EditData(request, pk):
     data = Forum.objects.filter(id=pk)
     serializer = SerializerForum(instance=data, data=request.data)

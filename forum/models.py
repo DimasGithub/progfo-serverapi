@@ -20,6 +20,7 @@ class Groupforum(models.Model):
 class Forum(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
+    gambar = models.ImageField(upload_to='gambar/')
     descproblem = RichTextField()
     tags = models.ManyToManyField(Tags)
     group = models.ForeignKey(Groupforum, on_delete=models.CASCADE)
